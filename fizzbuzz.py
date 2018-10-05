@@ -13,3 +13,19 @@ def is_divisible_by_five(number):
         return True
     else:
         return False
+
+
+def fizzbuzz(number):
+    if is_divisible_by_three(number) == True & is_divisible_by_five(number) == True:
+        return "FizzBuzz"
+    elif is_divisible_by_three(number) == True:
+        return "Fizz"
+    elif is_divisible_by_five(number) == True:
+        return "Buzz"
+    else:
+        return number
+
+for x in range(101):
+    print fizzbuzz(x)
+
+# can refactor to have implicit return and implicit true
